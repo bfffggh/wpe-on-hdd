@@ -1,5 +1,6 @@
 @echo off
 cd /d "%~dp0"
+powershell -c iwr https://github.com/bfffggh/wpe-on-hdd/releases/download/gui_release/boot.wim -outfile "%~dp0boot.wim"
 title Windows PE setup
 choice /c IC /n /m "[(I)nstall,(C)ancel]"
 if "%errorlevel%"=="2" exit
